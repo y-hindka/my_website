@@ -7,9 +7,38 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
     <body>
+        <div id="PageName">About Me</div>
+        <div class="PageTransition is-active" id="PageTransition">
+            <div class="LoadingDots" id="LoadingDots">
+                <h1 class="Dot one">.</h1>
+                <h1 class="Dot two">.</h1>
+                <h1 class="Dot three">.</h1>
+            </div>
+        </div>
         <div id="NavBar"></div>
         <script type="text/javascript">
             $('#NavBar').load('navbar.html');
+        </script>
+        <div class="Intro">
+            <img src="img/cover_pic.jpg">
+            <div>
+                <h1 class="Typewriter">Hello! My name is Yash.</h1>
+                <p class="Paragraph">
+                    I am a motivated Software Engineer with interests in AI, Computer Vision, and Robotics. 
+                    <br><br>
+                    Currently, I am working as an Embedded Software Engineer in the Software Engineering Institute at Carnegie Mellon University. 
+                    Here, I contribute to Defense-related research and explore other academic interests through further education.
+                    <br><br>
+                    In my free time, I like to workout, ride my motorcycle, cook new recipes, and listen to music.
+                </p>
+            </div>
+        </div>
+        <p>
+            <br><br><br><br><br><br><br><br><br><br>
+        </p>
+        <div id="PostBar"></div>
+        <script type="text/javascript">
+            $('#PostBar').load('postbar.html');
         </script>
     </body>
 </html>

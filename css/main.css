@@ -1,18 +1,24 @@
 :root {
-    --theme-color: rgb(2,0,35);
+    --theme-color: rgba(2,0,35,0.85);
+    --theme-color-alt: rgba(128,128,128,0.9);
     --font-color: white;
-    --header-font: copperplate, monospace;
+    --site-font: copperplate, monospace;
     --hover-color: darkgrey;
 }
 
 /********** BODY **********/ 
 
 body {
-    background: var(--theme-color); /* for backwards compatability with browsers that don't have radial-gradient */
-    background: radial-gradient(circle, var(--theme-color) 0%, rgba(2,0,53,1) 95%, rgba(0,212,255,1) 100%);
+    background-image: url("../img/background3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/********** NAVBAR **********/ 
+.PageName {
+    visibility: hidden;
+}
+
+/********** NAVBAR **********/
 
 .NavBar h1 {
     margin: 0;
@@ -22,7 +28,7 @@ body {
     text-decoration: none;
 
     font-weight: bold;
-    font-family: var(--header-font);
+    font-family: var(--site-font);
     font-size: 32pt;
 }
 
@@ -37,12 +43,12 @@ body {
 
 .NavBar ul {
     list-style-type: none;
-    margin: 0; 
-    padding: 0;
+    margin: 0pt;
+    padding: 0pt;
 
     text-align: center;
 
-    font-family: var(--header-font);
+    font-family: var(--site-font);
     font-size: large;
 }
 
@@ -55,28 +61,125 @@ body {
     font-size: larger;
 }
 
+/********** POSTBAR **********/
+.PostBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--theme-color);
+    color: var(--font-color);
+    bottom: 0;
+    padding-left: 5pt;
+    padding-right: 5pt;
+}
+
+.PostBar.left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.PostBar.right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
 /********** PAGE TRANSITION **********/
 
 .PageTransition {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    background: white;
-    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    background: black;
+    z-index: 1;
+    transition: 0.25s ease-out;
 }
 
-.WipeAnimation {
-    animation: wipeAnim 2s ease-in-out;
+.PageTransition.is-active {
+    left: 0%;
 }
 
-@keyframes wipeAnim {
-    0% { width: 0%; }
-    20% {
-        width: 10%;
-        transform: translateX(-100%) skewX(-5deg);
-    }
-    40% { width: 100%; }
-    60% { width: 100%; }
-    100% { width: 0%; }
+.LoadingDots {
+    color: var(--font-color);
+    font-family: var(--site-font);
+    font-weight: bold;
+    font-size: 32pt;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+.Dot {
+    display: inline;
+    margin: 0.5em;
+    animation: 1s DotAnimation ease-in-out infinite;
+}
+
+.Dot.two {
+    animation-delay: 0.15s;
+}
+
+.Dot.three {
+    animation-delay: 0.3s;
+}
+
+@keyframes DotAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/********** TEXT **********/
+.Intro {
+    margin: 5em 2em 5em 2em;
+    padding: 2em 5em 2em 5em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+    background: var(--theme-color-alt);
+    border: 3pt solid var(--font-color);
+}
+
+.Paragraph {
+    font-family: var(--site-font);
+    font-size: 14pt;
+    color: var(--font-color);
+}
+
+.Typewriter {
+    font-family: var(--site-font);
+    font-weight: bold;
+    font-size: 22pt;
+    color: var(--theme-color);
+
+    border-right: 2pt solid orange;
+    letter-spacing: 0.15em;
+    overflow: hidden;
+    margin: 0;
+    width: fit-content;
+    white-space: nowrap;
+    animation: 
+        Typing 3s steps(25, end),
+        BlinkingCursor 0.5s infinite;
+}
+
+@keyframes Typing {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes BlinkingCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+/********** PICTURES **********/
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
 }
