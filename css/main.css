@@ -70,6 +70,9 @@ body {
     bottom: 0;
     padding-left: 5pt;
     padding-right: 5pt;
+    font-family: var(--site-font);
+    font-weight: bold;
+    font-size: 12pt;
 }
 
 .PostBar.left {
