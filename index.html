@@ -19,26 +19,66 @@
         <script type="text/javascript">
             $('#NavBar').load('navbar.html');
         </script>
-        <div class="Intro">
-            <img src="img/cover_pic.jpg">
-            <div>
-                <h1 class="Typewriter">Hello! My name is Yash.</h1>
-                <p class="Paragraph">
-                    I am a motivated Software Engineer with interests in AI, Computer Vision, and Robotics. 
-                    <br><br>
-                    Currently, I am working as an Embedded Software Engineer in the Software Engineering Institute at Carnegie Mellon University. 
-                    Here, I contribute to Defense-related research and explore other academic interests through further education.
-                    <br><br>
-                    In my free time, I like to workout, ride my motorcycle, cook new recipes, and listen to music.
-                </p>
+        <div class="Content">
+            <div class="AboutMe">
+                <img src="img/cover_pic.jpg">
+                <div>
+                    <h1 class="Typewriter" style="text-align: left;">Hello! My name is <span class="important-text">Yash</span>.</h1>
+                    <div class="Roll-up">
+                        <p class="Paragraph">
+                            I am a motivated Software Engineer with interests in AI, Computer Vision, and Robotics. 
+                            <br><br>
+                            Currently, I am working as an Embedded Software Engineer in the Software Engineering Institute at Carnegie Mellon University. 
+                            Here, I contribute to Defense-related research and explore other academic interests through further education.
+                            <br><br>
+                            In my free time, I like to workout, ride my motorcycle, cook new recipes, and listen to music.
+                        </p>
+                        <div style="margin: 20pt;">
+                            <h1>Connect With Me!</h1>
+                            <ul class="Links">
+                                <li><a href="https://github.com/y-hindka" target="_blank"><img src="img/github_logo.png"></a></li>
+                                <li><a href="https://www.linkedin.com/in/yash-hindka-676388197/" target="_blank"><img src="img/linkedin_logo.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p>
-            <br><br><br><br><br><br><br><br><br><br>
-        </p>
-        <div id="PostBar"></div>
+        <div class="Content">
+            <div>
+                <h1>Experience</h1>
+                <div style="display: flex;">
+                    <img src="img/arrow.png" class="round left" onclick="round_clicked(-1)">
+                    <div class="Carousel-container">
+                        <div class="Container">
+                            <img class="img experience" src="img/SEI_logo.png">
+                            <div style="border: 1pt solid black;"></div>
+                            <p class="p experience">
+                                Here, I am working as an <span class="important-text">Embedded Software Engineer</span> to ensure code robustness.
+                                <br>
+                                <br>
+                                I use low-level languages like <span class="important-text">C and VHDL</span> to accomplish this.
+                            </p>
+                        </div>
+                        <div class="Container">
+                            <img class="img experience" src="img/RMD_logo.svg">
+                            <div style="border: 1pt solid black;"></div>
+                            <p class="p experience">Description of Raytheon job.</p>
+                        </div>
+                        <div class="Container">
+                            <img class="img experience" src="img/Leidos_logo.png">
+                            <div style="border: 1pt solid black;"></div>
+                            <p class="p experience">Description of Leidos job.</p>
+                        </div>
+                    </div>
+                    <img src="img/arrow.png" class="round right" onclick="round_clicked(1)">
+                </div>
+            </div>
+        </div>
+        <div id="PostBar" style="position: relative;"></div>
         <script type="text/javascript">
             $('#PostBar').load('postbar.html');
         </script>
+        <script type="text/javascript" src="js/carousel.js"></script>
     </body>
 </html>
