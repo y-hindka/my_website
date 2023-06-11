@@ -6,7 +6,7 @@
         <link href="css/main.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="background-image: url('../img/background3.jpg');">
         <div id="PageName">About Me</div>
         <div class="PageTransition is-active" id="PageTransition">
             <div class="LoadingDots" id="LoadingDots">
@@ -23,15 +23,16 @@
             <div class="AboutMe">
                 <img src="img/cover_pic.jpg">
                 <div>
-                    <h1 class="Typewriter" style="text-align: left;">Hello! My name is <span class="important-text">Yash</span>.</h1>
+                    <h1 class="Typewriter" style="text-align: left;">Hello! My name is <span style="color: orange;">Yash</span>.</h1>
                     <div class="Roll-up">
                         <p class="Paragraph">
-                            I am a motivated Software Engineer with interests in AI, Computer Vision, and Robotics. 
+                            I am a motivated Software Engineer who graduated with a Bachelor's degree from the University of Wisconsin-Madison with 
+                            Highest Distinction in Computer Science. I have interests in AI, Computer Vision, and Robotics. 
                             <br><br>
                             Currently, I am working as an Embedded Software Engineer in the Software Engineering Institute at Carnegie Mellon University. 
                             Here, I contribute to Defense-related research and explore other academic interests through further education.
                             <br><br>
-                            In my free time, I like to workout, ride my motorcycle, cook new recipes, and listen to music.
+                            For the future, I look to steer my career more towards my main interests and am planning my education and experience accordingly.
                         </p>
                         <div style="margin: 20pt;">
                             <h1>Connect With Me!</h1>
@@ -44,34 +45,95 @@
                 </div>
             </div>
         </div>
-        <div class="Content">
-            <div>
-                <h1>Experience</h1>
-                <div style="display: flex;">
-                    <img src="img/arrow.png" class="round left" onclick="round_clicked(-1)">
-                    <div class="Carousel-container">
-                        <div class="Container">
-                            <img class="img experience" src="img/SEI_logo.png">
-                            <div style="border: 1pt solid black;"></div>
-                            <p class="p experience">
-                                Here, I am working as an <span class="important-text">Embedded Software Engineer</span> to ensure code robustness.
-                                <br>
-                                <br>
-                                I use low-level languages like <span class="important-text">C and VHDL</span> to accomplish this.
-                            </p>
-                        </div>
-                        <div class="Container">
-                            <img class="img experience" src="img/RMD_logo.svg">
-                            <div style="border: 1pt solid black;"></div>
-                            <p class="p experience">Description of Raytheon job.</p>
-                        </div>
-                        <div class="Container">
-                            <img class="img experience" src="img/Leidos_logo.png">
-                            <div style="border: 1pt solid black;"></div>
-                            <p class="p experience">Description of Leidos job.</p>
-                        </div>
+        <div style="display: flex;">
+            <div class="Content" style="width: 40%;">
+                <h1>
+                    Professional Experience
+                </h1>
+                <div id="Carousel-container" class="Carousel-container">
+                    <div class="Container active">
+                        <img class="img experience" src="img/SEI_logo.png">
+                        <div style="border: 1pt solid black; margin-top: 10px;"></div>
+                        <p class="p experience">
+                            Here, I am working as an <span class="important-text">Embedded Software Engineer</span> to ensure code robustness.
+                            <br><br>
+                            I use low-level languages like <span class="important-text">C and VHDL</span> to accomplish this.
+                        </p>
                     </div>
-                    <img src="img/arrow.png" class="round right" onclick="round_clicked(1)">
+                    <div class="Container">
+                        <img class="img experience" src="img/RMD_logo.svg">
+                        <div style="border: 1pt solid black; margin-top: 10px;"></div>
+                        <p class="p experience">
+                            At Raytheon, I worked on embedded Linux software called Cooperative Engagement Capability (CEC) for the U.S. Navy.
+                            <br><br>
+                            I led efforts to <span class="important-text">design, implement, debug, and test</span> significant improvements to radar tracking 
+                            algorithms on a complex, <span class="important-text">multi-threaded C++</span> code base. Throughout the process, I 
+                            <span class="important-text">coordinated with Engineering Fellows and Subject Matter Experts</span> to ensure the quality of my work.
+                            <br><br>
+                            In addition, I implemented and tested multi-threaded C++ <span class="important-text">web socket</span> code using the Boost Beast 
+                            library to enable two-way communication between critical components. I also Created a 
+                            <span class="important-text">REST API</span> using C++ to retrieve system status and perform operations on the system.
+                            <br><br>
+                            As part of my contributions to testing, I developed <span class="important-text">MATLAB</span> scripts to analyze simulation data, 
+                            allowing my team to <span class="important-text">verify requirements</span> were met. Additionally, I crafted 
+                            <span class="important-text">full system BDD tests</span> using Gherkin, Squish, and Python as well as C++ 
+                            <span class="important-text">unit tests using the GoogleTest<span class="important-text"> framework.
+                        </p>
+                    </div>
+                    <div class="Container">
+                        <img class="img experience" src="img/Leidos_logo.png">
+                        <div style="border: 1pt solid black; margin-top: 10px;"></div>
+                        <p class="p experience">
+                            In my internship at Leidos, I was tasked with <span class="important-text">modernizing</span> a management system for one of the 
+                            company's warehouses. 
+                            <br><br>
+                            I collaborated with a team to migrate an outdated <span class="important-text">SQL Server database to AWS</span> and develop a streamlined website to 
+                            access and modify the information in that database. The new website <span class="important-text">reduced redundancy</span> within the legacy warehouse 
+                            management system and provided a much more <span class="important-text">streamlined</span> experience for the warehouse employees.
+                            <br><br>
+                            I used <span class="important-text">ReactJS</span> to create a frontend system that used a <span class="important-text">REST API</span> to interact with 
+                            a <span class="important-text">Spring Boot</span> backend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="Content" style="width: 40%;">
+                <h1 style="font-family: Bradley Hand;">
+                    Not-So-Professional Experience 
+                    <br>
+                    (aka hobbies)
+                </h1>
+                <div class="Gallery">
+                    <div class="Hobby-container" style="margin-right: 0;">
+                        <img class="img hobby" src="img/cooking.jpg">
+                        <p class="p Hobby-description">
+                            As much as I don't like doing dishes, I like cooking and trying new recipes!
+                        </p>
+                    </div>
+                    <div class="Hobby-container" style="margin-left: 0;">
+                        <img class="img hobby" src="img/lifting.jpg">
+                        <p class="p Hobby-description">
+                            I love to workout, get stronger, and stay fit 💪
+                        </p>
+                    </div>
+                    <div class="Hobby-container" style="margin-right: 0;">
+                        <img id="piano_img" class="img hobby" src="img/piano.jpg">
+                        <iframe 
+                            id="piano_vid"
+                            class="img hobby"
+                            style="display: none;" 
+                            width="200" height="200" 
+                            src="https://www.youtube.com/embed/A1PCVl4IceI?start=1311" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                    </div>
+                    <div class="Hobby-container" style="margin-left: 0;">
+                        <img class="img hobby" src="img/sports.jpg">
+                        <p class="p Hobby-description">
+                            I am passionate about sports, both playing and watching. Go Badgers! 🦡
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

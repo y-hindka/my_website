@@ -5,8 +5,8 @@
         <link href="css/main.css" rel="stylesheet"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
-    <body>
-        <div id="PageName">Interests</div>
+    <body style="background-color: rgba(0,0,0,0.85);">
+        <div id="PageName">Resume</div>
         <div class="PageTransition is-active" id="PageTransition">
             <div class="LoadingDots" id="LoadingDots">
                 <h1 class="Dot one">.</h1>
@@ -18,13 +18,16 @@
         <script type="text/javascript">
             $('#NavBar').load('navbar.html');
         </script>
-        <div class="Content">
-            <div>
-                <h1>Interests</h1>
-                <div class="MobileApps">
-                    
-                </div>
+        <div class="Resume">
+            <div style="position: relative; margin: auto; text-align: center; margin-bottom: 20px;">
+                <a class="a Download-button" href="https://docs.google.com/document/d/14plEVLzwJLV6qmJsU5ox26bfhOyOUTn3HyGvOpITcUU/export?format=pdf" target="_blank">
+                        Download PDF
+                </a>
             </div>
+            <iframe 
+                style="border: none; height: 100%; width: 100%; overflow: hidden;"
+                src="https://docs.google.com/document/d/e/2PACX-1vQa-z-t2jrc0IaOdLZTuN9P9orDHbSEHlK2BjOrDAFBBI1swMvDuEP4pkrf3VSjSFtP3VoWHzdhytwk/pub?embedded=true">
+            </iframe>
         </div>
         <div id="PostBar" style="position: relative;"></div>
         <script type="text/javascript">

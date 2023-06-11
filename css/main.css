@@ -4,15 +4,17 @@
     --secondary-color: rgb(255,165,0);
     --font-color: white;
     --site-font: copperplate, monospace;
+    --fun-font: Bradley hand;
     --hover-color: darkgrey;
     --typewriter-anim-length: 3s;
+    --container-size: 400px;
 }
 
 /********** BODY **********/ 
 
 body {
-    background-image: url("../img/background3.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
     margin-top: 10%;
@@ -26,9 +28,11 @@ body {
 .NavBar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    padding-bottom: 1%;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.05));
+    padding-bottom: 1%;
     z-index: 1;
 }
 
@@ -52,9 +56,13 @@ body {
     font-size: 32pt;
 }
 
-.NavBar a {
+a {
     text-decoration: none;
     color: var(--font-color);
+}
+
+a:hover {
+    color: var(--hover-color);
 }
 
 .NavBar ul {
@@ -162,7 +170,7 @@ h1 {
     color: var(--font-color);
     font-family: var(--site-font);
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 24pt;
     text-align: center;
 }
 
@@ -175,15 +183,25 @@ p {
 
 p.experience {
     color: black;
-    background-color: white;
     border-radius: 10px;
     text-align: left;
     margin-top: 10px;
     padding: 10px;
 }
 
+p.Hobby-description {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: var(--fun-font);
+    background-color: var(--theme-color);
+}
+
 .important-text {
-    color: orange;
+    color: var(--theme-color-alt);
 }
 
 .Content {
@@ -208,7 +226,7 @@ p.experience {
 }
 
 .Roll-up {
-    animation: ParagraphSlideUp 3s forwards;
+    animation: ParagraphSlideUp 1s forwards;
     animation-delay: var(--typewriter-anim-length);
     opacity: 0;
 }
@@ -251,55 +269,72 @@ p.experience {
 .Carousel-container {
     position: relative;
     margin: auto;
-    padding: 20pt;
-    border-radius: 25px;
-    height: 250px;
-    width: 400px;
+    width: 500px;
+    height: auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Carousel-container::-webkit-scrollbar {
+    display: none;
 }
 
 .Container {
-    display: none;
-    padding: 20pt;
-    border-radius: 25px;
-    background-color: white;
-    height: 200px;
-    width: 400px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 25px;
+    background-color: rgba(255,255,255,0.7);
+    flex: 0 0 var(--container-size);
+    height: 400px;
+    width: var(--container-size);
+    opacity: 0.6;
+    margin: 10px;
+    scroll-snap-align: center;
+    overflow-y: scroll;
 }
 
-.round {
+.Container.active {
+    opacity: 1;
+}
+
+.arrow {
     border: 2px solid white;
     border-radius: 100%;
-    margin: auto;
+    margin: auto 10px auto 10px;
     padding: 10px;
     height: 20px;
     width: 20px;
 }
 
-.round:hover {
+.arrow:hover {
     background-color: var(--theme-color-alt);
 }
 
-.round:active {
+.arrow:active {
     scale: 90%;
 }
 
-.round.left {
+.arrow.left {
     rotate: 270deg;
 }
 
-.round.right {
+.arrow.right {
     rotate: 90deg;
+}
+
+.Resume {
+    position: relative;
+    margin: auto auto 20px auto;
+    width: 55%;
+    height: auto;
 }
 
 /********** PICTURES **********/
 img {
     max-width: 100%;
     height: auto;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     border-radius: 10%;
 }
 
@@ -309,11 +344,72 @@ img.experience {
     margin-left: 0;
 }
 
+img.hobby {
+    border-radius: 0;
+    margin: 0;
+}
+
 .Links {
     display: grid;
-    grid-template-columns: 0.05fr 0.05fr;
+    grid-template-columns: 0.15fr 0.15fr;
     margin: 2%;
     column-gap: 10%;
     align-items: center;
     justify-content: center;
+}
+
+.Gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.Hobby-container {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Hobby-container:hover {
+    scale: 120%;
+    z-index: 2;
+    animation: 0.5s popOut ease-in-out;
+}
+
+@keyframes popOut {
+    0% { scale: 100%; }
+    50% { scale: 130%; }
+    100% { scale: 120%; }
+}
+
+.Hobby-container:hover p.Hobby-description{
+    display: inherit;
+    animation: 0.5s slideDown ease-out forwards;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0%); }
+}
+
+.Download-button {
+    border: 2pt solid green;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    font-family: var(--site-font);
+    padding: 10px;
+}
+
+.Download-button:hover {
+    color: white;
+    animation: 0.2s fillIn forwards ease-out;
+}
+
+@keyframes fillIn {
+    to {background-color: green;}
 }
