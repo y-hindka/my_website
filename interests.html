@@ -18,11 +18,83 @@
         <script type="text/javascript">
             $('#NavBar').load('navbar.html');
         </script>
-        <div class="Content">
-            <div>
-                <h1>Interests</h1>
-                <div class="MobileApps">
-                    
+        <div>
+            <div style="margin: 40px; margin-left: 5%; margin-right: 5%;">
+                <h1>Professional Interests</h1>
+                <div class="interests">
+                    <div style="display: flex; align-items: center; justify-content: left;">
+                        <div class="interest-container" style="margin-left: 0; margin-right: 20%;">
+                            <h2 style="text-align: center; color: black; padding: 40px;">AI</h2>
+                        </div>
+                        <p>
+                            I like AI.
+                        </p>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: right;">
+                        <p style="margin-right: 0;">
+                            I like Computer Vision.
+                        </p>
+                        <div class="interest-container" style="margin-right: 0; margin-left: 20%;">
+                            <h2 style="text-align: center; color: black; padding: 40px;">Computer Vision</h2>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: left;">
+                        <div class="interest-container" style="margin-left: 0; margin-right: 20%;">
+                            <h2 style="text-align: center; color: black; padding: 40px;">Robotics</h2>
+                        </div>
+                        <p>
+                            I like Robotics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 40px; padding-bottom: 40px; background-color: white;">
+                <h1 style="font-family: monaco,Consolas,Lucida Console; margin: 40px; color: black;">
+                    Not-So-Professional Interests 
+                </h1>
+                <div class="Gallery">
+                    <div class="flex-center-container">
+                        <div class="hobby-container margin-medium">
+                            <img class="img margin-zero straight-border" src="img/cooking.jpg">
+                        </div>
+                        <p class="p hobby-description margin-medium">
+                            As much as I don't like doing dishes, I like cooking and trying new recipes!
+                        </p>
+                    </div>
+                    <div class="flex-center-container">
+                        <div class="hobby-container margin-medium">
+                            <img class="img margin-zero straight-border" src="img/lifting.jpg">
+                        </div>
+                        <p class="p hobby-description margin-medium">
+                            I love to workout, get stronger, and stay fit 💪
+                        </p>
+                    </div>
+                    <div class="flex-center-container">
+                        <div class="hobby-container margin-medium">
+                            <img id="piano_img" class="img margin-zero straight-border" src="img/piano.jpg">
+                            <iframe 
+                                id="piano_vid"
+                                class="img margin-zero straight-border"
+                                style="display: none;" 
+                                width="300" height="300" 
+                                src="https://www.youtube.com/embed/A1PCVl4IceI?start=1311" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;">
+                            </iframe>
+                        </div>
+                        <p class="p hobby-description margin-medium">
+                            I love to play and listen to music. Listen of one of my performances here!
+                        </p>
+                    </div>
+                    <div class="flex-center-container">
+                        <div class="hobby-container margin-medium">
+                            <img class="img margin-zero straight-border" src="img/sports.jpg">
+                        </div>
+                        <p class="p hobby-description margin-medium">
+                            I am passionate about sports, both playing and watching. Go Badgers! 🦡
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,5 +102,7 @@
         <script type="text/javascript">
             $('#PostBar').load('postbar.html');
         </script>
+        <script type="text/javascript" src="js/utilities.js"></script>
+        <script type="text/javascript" src="js/interests.js"></script>
     </body>
 </html>

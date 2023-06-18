@@ -6,8 +6,7 @@ function override_window_on_load()
 {
     // update navbar
     var active = document.getElementById(document.getElementById("PageName").textContent);
-    active.style.color = "darkgrey";
-    active.style.borderBottom = "1pt solid darkgrey";
+    if (active) active.style.color = "darkgrey";
 
     slide_transition_in();
 }
