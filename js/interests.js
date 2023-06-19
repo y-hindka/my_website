@@ -11,11 +11,16 @@ pianoVid.addEventListener('mouseleave', function() {
     pianoImg.style.display = 'inherit';
 });
 
-var elements = document.querySelectorAll(".interest-container,.hobby-container");
-var threshold = 300;
-comeIn(elements, threshold);
+var interests = document.getElementsByClassName("interest-container");
+var hobbies = document.getElementsByClassName("hobby-container");
+var interestThreshold = 0;
+var hobbyThreshold = 300;
+
+comeIn(interests, interestThreshold);
+comeIn(hobbies, hobbyThreshold);
 
 window.onscroll = function() {
-    comeIn(elements, threshold);
+    comeIn(interests, interestThreshold);
+    comeIn(hobbies, hobbyThreshold);
 };
 

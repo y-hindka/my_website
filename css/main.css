@@ -33,8 +33,7 @@ body {
     right: 0;
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.05));
-    padding-bottom: 1%;
-    z-index: 10;
+    z-index: 3;
 }
 
 .NavBar:hover {
@@ -47,7 +46,7 @@ body {
 
 .NavBar h1 {
     margin: 0;
-    padding: 20pt;
+    padding: 20px;
 
     text-align: center;
     text-decoration: none;
@@ -57,16 +56,39 @@ body {
     font-size: 32pt;
 }
 
-a {
-    text-decoration: none;
+.title {
     color: var(--font-color);
 }
 
-a:hover {
+.title:hover {
     color: var(--hover-color);
 }
 
+.nav-anchor {
+    color: var(--hover-color);
+}
+
+.underline {
+    content: "";
+    display: block;
+    position: relative;
+    background: white;
+    height: 3px;
+    width: 0;
+    margin: 5px auto 5px auto;
+    transition: all 0.25s ease;
+}
+
+.nav-anchor:hover .underline {
+    background: var(--hover-color);
+    width: 100%;
+}
+
 ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     list-style-type: none;
     margin: 0pt;
     padding: 0pt;
@@ -78,13 +100,9 @@ ul {
 }
 
 .NavBar li {
-    display: inline;
-    margin: 30pt;
+    padding-bottom: 5px;
+    margin: 10px 30px 10px 30px;
     font-size: 16pt;
-}
-
-.NavBar li:hover {
-    font-size: larger;
 }
 
 /********** POSTBAR **********/
@@ -129,7 +147,7 @@ ul {
     width: 100%;
     left: -100%;
     background: black;
-    z-index: 2;
+    z-index: 4;
     transition: 0.25s ease-out;
 }
 
@@ -168,6 +186,10 @@ ul {
 }
 
 /********** CONTENT **********/
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: var(--font-color);
     font-family: var(--site-font);
@@ -212,6 +234,7 @@ p.hobby-description {
     padding: 2em 5em 2em 5em;
     background: var(--theme-color-alt);
     box-shadow: 0px 3px 20px 5px black;
+    transform: translateY(50%);
     opacity: 0;
 }
 
@@ -389,6 +412,18 @@ p.tech-description {
     animation-delay: 0.75s;
 }
 
+.interest-container.left {
+    margin-left: 0;
+    margin-right: 20%;
+    transform: translateX(-50%);
+}
+
+.interest-container.right {
+    margin-right: 0;
+    margin-left: 20%;
+    transform: translateX(50%);
+}
+
 /********** PICTURES **********/
 img {
     max-width: 100%;
@@ -448,6 +483,8 @@ img.socials {
 @keyframes comeIn {
     to {
         top: 0%;
+        transform: translateY(0%);
+        transform: translateX(0%);
         opacity: 1; 
     }
 }
@@ -459,21 +496,15 @@ img.socials {
     font-size: large;
     font-family: var(--site-font);
     padding: 10px;
+    transition: 
+        color 0.25s ease-out,
+        background-color 0.25s ease-out;
 }
 
 .Download-button:hover {
-    color: white;
-    animation: 0.2s fillIn forwards ease-out;
+    color: black;
+    background-color: lightgoldenrodyellow;
 }
-
-@keyframes fillIn {
-    to {
-        background-color: lightgoldenrodyellow;
-        color: black;
-    }
-}
-
-
 
 /***** NEW CSS *****/
 .flex {

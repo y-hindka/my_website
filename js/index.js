@@ -1,6 +1,7 @@
 var contentContainers = document.getElementsByClassName("Content");
-comeIn(contentContainers);
+var threshold = -50;
+comeIn(contentContainers, threshold);
 
 window.onscroll = function() {
-    comeIn(contentContainers);
+    comeIn(contentContainers, threshold);
 };

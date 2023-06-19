@@ -5,8 +5,12 @@ window.onload = override_window_on_load();
 function override_window_on_load()
 {
     // update navbar
-    var active = document.getElementById(document.getElementById("PageName").textContent);
-    if (active) active.style.color = "darkgrey";
+    var activePage = document.getElementById(document.getElementById("PageName").textContent);
+    if (activePage) {
+        activePage.style.color = "white";
+        var underline = activePage.getElementsByClassName("underline")[0];
+        underline.style.width = "100%";
+    }
 
     slide_transition_in();
 }
