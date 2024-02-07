@@ -8,6 +8,11 @@
     --hover-color: darkgrey;
     --typewriter-anim-length: 3s;
     --container-size: 400px;
+
+    --margin-small: 20px;
+    --margin-large: 50px;
+
+    --navbar-index: 3;
 }
 
 /********** BODY **********/ 
@@ -18,22 +23,32 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    margin-top: 10%;
+    width: 100%;
+    margin: 0 0 auto 0;
 }
 
 #PageName {
-    visibility: hidden;
+    display: none;
 }
 
 /********** NAVBAR **********/
 .NavBar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    margin-bottom: var(--margin-large);
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.05));
-    z-index: 3;
+    z-index: var(--navbar-index);
+}
+
+.NavBar.scrolled {
+    position: fixed;
+    top: -100%;
+    z-index: var(--navbar-index + 1);
+    background-color: black;
+    transition: all 0.5s ease;
 }
 
 .NavBar:hover {
@@ -101,7 +116,7 @@ ul {
 
 .NavBar li {
     padding-bottom: 5px;
-    margin: 10px 30px 10px 30px;
+    margin: 10px 50px 10px 50px;
     font-size: 16pt;
 }
 
@@ -109,7 +124,6 @@ ul {
 .PostBar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
 
     background-color: var(--theme-color);
     font-family: var(--site-font);
@@ -120,6 +134,7 @@ ul {
     position: absolute;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
     margin: 0;
 }
@@ -127,14 +142,21 @@ ul {
 .PostBar-left {
     color: var(--font-color);
     display: flex;
+    width: fit-content;
     justify-content: left;
+    align-items: center;
     padding-left: 10pt;
 }
 
 .PostBar-right {
     display: flex;
+    align-items: center;
     justify-content: right;
     padding-right: 10pt;
+}
+
+.PostBar-container {
+    position: relative;
 }
 
 /********** PAGE TRANSITION **********/
@@ -399,10 +421,10 @@ p.tech-description {
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color: white;
     border-radius: 50%;
-    height: 400px;
-    width: 400px;
+    height: var(--container-size);
+    width: var(--container-size);
+    flex: 0 0 auto;
     opacity: 0;
     box-shadow: 0px 3px 20px 5px black;
 }
@@ -414,14 +436,35 @@ p.tech-description {
 
 .interest-container.left {
     margin-left: 0;
-    margin-right: 20%;
+    margin-right: var(--margin-large);
     transform: translateX(-50%);
 }
 
 .interest-container.right {
     margin-right: 0;
-    margin-left: 20%;
+    margin-left: var(--margin-large);
     transform: translateX(50%);
+}
+
+.interest-background {
+    opacity: 0.3;
+    position: absolute;
+    height: var(--container-size);
+    width: var(--container-size);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    flex: 0 0 auto;
+    height: 500;
+    width: 350;
+    margin: var(--margin-large);
 }
 
 /********** PICTURES **********/
@@ -433,7 +476,13 @@ img {
 img.socials {
     position: relative;
     top: 100%;
-    transform: translateY(-100%);
+}
+
+img.project {
+    top: 0;
+    height: 50%;
+    width: auto;
+    margin: 0;
 }
 
 .Links {
@@ -466,7 +515,6 @@ img.socials {
 
 .hobby-container:hover {
     scale: 120%;
-    z-index: 2;
     animation: 0.5s popOut ease-in-out;
 }
 
@@ -515,6 +563,14 @@ img.socials {
     justify-content: center;
 }
 
+.flex.right-horizontal {
+    justify-content: right;
+}
+
+.flex.left-horizontal {
+    justify-content: left;
+}
+
 .flex.center-vertical {
     align-items: center;
 }
@@ -537,6 +593,10 @@ img.socials {
 
 .margin-medium {
     margin: 30px;
+}
+
+.margin-large {
+    margin: var(--margin-large);
 }
 
 .padding-small {
@@ -583,6 +643,27 @@ img.socials {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .text-black {
     color: black;
+}
+
+.line-spacing-medium {
+    line-height: 2;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-contents {
+    display: contents;
 }

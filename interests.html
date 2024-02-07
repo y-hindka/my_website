@@ -20,30 +20,47 @@
         </script>
         <div>
             <div style="margin: 40px; margin-left: 5%; margin-right: 5%;">
-                <h1>Professional Interests</h1>
+                <h1 class="margin-large">Professional Interests</h1>
                 <div class="interests">
-                    <div style="display: flex; align-items: center; justify-content: left;">
+                    <div class="flex center-vertical left-horizontal">
                         <div class="interest-container left">
-                            <h2 style="text-align: center; color: black; padding: 40px;">AI</h2>
+                            <div class="interest-background" style="background-image: url('img/wisc-robot.jpeg');"></div>
+                            <h2 class="text-center padding-medium">Robotics</h2>
                         </div>
-                        <p>
-                            I like AI.
+                        <p class="line-spacing-medium text-justify">
+                            I am passionate about Robotics; it is a powerful tool to make human lives easier and more productive. In my undergradute 
+                            years, I was on the Wisconsin Robotics team, where I contributed to the autonomous navigation system of our Mars rover prototype 
+                            (pictured left).
+                            <br/><br/>
+                            Later on in my college career, I joined the Human-Computer Interaction (HCI) Lab. There, 
+                            I worked with the Microsoft Hololens to create an AR workspace for a Panda robotic arm. Check out my projects page for more 
+                            on this. Another project at the HCI involved researching optimal positioning for 
+                            a camera drone providing a viewpoint for a remote robot operator. In the future, I hope to delve into medical robotics 
+                            and see what contributions I can make there.
                         </p>
                     </div>
-                    <div style="display: flex; align-items: center; justify-content: right;">
-                        <p style="margin-right: 0;">
-                            I like Computer Vision.
+                    <div class="flex center-vertical right-horizontal">
+                        <p class="line-spacing-medium text-justify">
+                            I have recently started to experiment more with Computer Vision (CV), and in doing so, I have realized it is something that piques 
+                            my interest. It relies heavily on n-dimensional math, which is something that challenges me. While I currently only 
+                            play around with OpenCV on my RaspberryPi, I am hoping to do some research with it in the near future.
                         </p>
                         <div class="interest-container right">
-                            <h2 style="text-align: center; color: black; padding: 40px;">Computer Vision</h2>
+                            <div class="interest-background" style="background-image: url('img/computer_vision.png');"></div>
+                            <h2 class="text-center padding-medium">Computer Vision</h2>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: center; justify-content: left;">
+                    <div class="flex center-vertical left-horizontal">
                         <div class="interest-container left">
-                            <h2 style="text-align: center; color: black; padding: 40px;">Robotics</h2>
+                            <div class="interest-background" style="background-image: url('img/neural_network.png')"></div>
+                            <h2 class="text-center padding-medium">AI</h2>
                         </div>
-                        <p>
-                            I like Robotics.
+                        <p class="line-spacing-medium text-justify">
+                            From assignments in class to personal projects to professional development, I have a strong interest in AI. I enjoy 
+                            learning about how math can be applied to a problem to create a model that allows the computer to "think" on its own. 
+                            I find it compelling how accurate these models can be and am looking for more ways to get involved with it professionally. Although 
+                            I have done AI projects through coursework and on my own, I am looking to get my foot inside the "AI-door" in the workplace to learn 
+                            the different ways companies are reaping AI's benefits.
                         </p>
                     </div>
                 </div>
@@ -98,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div id="PostBar" style="position: relative;"></div>
+        <div id="PostBar" class="PostBar-container"></div>
         <script type="text/javascript">
             $('#PostBar').load('postbar.html');
         </script>
