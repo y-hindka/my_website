@@ -48,7 +48,7 @@ body {
     top: -100%;
     z-index: var(--navbar-index + 1);
     background-color: black;
-    transition: all 0.5s ease;
+    transition: top 0.5s ease;
 }
 
 .NavBar:hover {
@@ -378,7 +378,7 @@ p.hobby-description {
 
 .resume-container {
     position: relative;
-    margin: 20px;
+    margin: var(--margin-large);
     text-align: center;
 }
 

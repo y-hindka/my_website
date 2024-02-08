@@ -31,8 +31,11 @@ function slide_transition_out(event)
 
     // else transition to requested page
     document.getElementById("PageTransition").classList.add("is-active");
+
     window.setTimeout(function() {
         window.location.href = event.target.href;
-        document.getElementById("PageTransition").classList.remove("is-active"); // to allow back button compatability
+
+        // to allow back button compatability
+        document.getElementById("PageTransition").classList.remove("is-active");
     }, transitionLen);
 }

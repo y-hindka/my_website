@@ -2,7 +2,6 @@ var scroll_top = 0;
 
 // retrieve top NavBar
 var navbar_top = document.getElementById("NavBarTop");
-var threshold = navbar_top.getBoundingClientRect().height / 2;
 
 // retrieve scrolled NavBar
 var navbar_scrolled = document.getElementById("NavBarScrolled");
@@ -16,7 +15,7 @@ function navbar_scroll()
     // retrieve scroll position
     var scroll_pos = window.scrollY;
 
-    if ( scroll_pos <= 0 || scroll_pos <= threshold )
+    if ( scroll_pos <= 0 )
     {
         // change NavBar styling if scrolled all the way at the top
 
