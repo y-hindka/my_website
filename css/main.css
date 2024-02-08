@@ -376,11 +376,10 @@ p.hobby-description {
     rotate: 90deg;
 }
 
-.Resume {
+.resume-container {
     position: relative;
-    margin: auto auto 20px auto;
-    width: 55%;
-    height: auto;
+    margin: 20px;
+    text-align: center;
 }
 
 .experience-container {

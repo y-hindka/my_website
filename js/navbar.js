@@ -45,8 +45,6 @@ function navbar_scroll()
     else if ( scroll_pos < scroll_top && scroll_pos + window.innerHeight < postbar_y )
     {
         // change NavBar styling if scrolling up
-        console.log(window.innerHeight);
-        console.log(scroll_pos, postbar_y);
 
         // make links visible
         page_links.classList.remove("display-none");

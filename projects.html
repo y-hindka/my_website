@@ -7,16 +7,13 @@
     </head>
     <body style="background-color: rgba(0,0,0,0.95);">
         <div id="PageName">Projects</div>
-        <div class="PageTransition is-active" id="PageTransition">
-            <div class="LoadingDots" id="LoadingDots">
-                <h1 class="Dot one">.</h1>
-                <h1 class="Dot two">.</h1>
-                <h1 class="Dot three">.</h1>
-            </div>
-        </div>
-        <div id="NavBar"></div>
+        <div id="PageTransitionDiv"></div>
         <script type="text/javascript">
-            $('#NavBar').load('navbar.html');
+            $('#PageTransitionDiv').load('page_transition.html');
+        </script>
+        <div id="NavBarDiv"></div>
+        <script type="text/javascript">
+            $('#NavBarDiv').load('navbar.html');
         </script>
         <div class="flex-center-container flex-wrap margin-large">
             <div class="project-container">

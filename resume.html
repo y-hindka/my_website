@@ -7,27 +7,23 @@
     </head>
     <body style="background-image: url('img/background4.jpg');">
         <div id="PageName">Resume</div>
-        <div class="PageTransition is-active" id="PageTransition">
-            <div class="LoadingDots" id="LoadingDots">
-                <h1 class="Dot one">.</h1>
-                <h1 class="Dot two">.</h1>
-                <h1 class="Dot three">.</h1>
-            </div>
-        </div>
-        <div id="NavBar"></div>
+        <div id="PageTransitionDiv"></div>
         <script type="text/javascript">
-            $('#NavBar').load('navbar.html');
+            $('#PageTransitionDiv').load('page_transition.html');
         </script>
-        <div class="Resume">
-            <div style="position: relative; margin: auto; text-align: center; margin-bottom: 20px;">
+        <div id="NavBarDiv"></div>
+        <script type="text/javascript">
+            $('#NavBarDiv').load('navbar.html');
+        </script>
+        <div class="resume-container">
+            <div class="resume-container">
                 <a class="a Download-button" href="https://docs.google.com/document/d/14plEVLzwJLV6qmJsU5ox26bfhOyOUTn3HyGvOpITcUU/export?format=pdf" target="_blank">
                         Download PDF
                 </a>
             </div>
-            <iframe 
-                style="border: none; height: 100%; width: 100%; overflow: hidden;"
-                src="https://docs.google.com/document/d/e/2PACX-1vQa-z-t2jrc0IaOdLZTuN9P9orDHbSEHlK2BjOrDAFBBI1swMvDuEP4pkrf3VSjSFtP3VoWHzdhytwk/pub?embedded=true">
-            </iframe>
+            <div class="resume-container">
+                <embed height="100%" width="75%" src="docs/Yash_Hindka_Resume.pdf"/>
+            </div>
         </div>
         <div id="PostBar" class="PostBar-container"></div>
         <script type="text/javascript">
