@@ -1,15 +1,18 @@
 var scroll_top = 0;
 
+// retrieve top NavBar
+var navbar_top = document.getElementById("NavBarTop");
+var threshold = navbar_top.getBoundingClientRect().height / 2;
+
+// retrieve scrolled NavBar
+var navbar_scrolled = document.getElementById("NavBarScrolled");
+var page_links = document.getElementById("NavBarPageLinks")
+
+// retrieve PostBar pos
+var postbar_y = document.getElementById("PostBar").getBoundingClientRect().y;
+
 function navbar_scroll()
 {
-    // retrieve top NavBar
-    var navbar_top = document.getElementById("NavBarTop");
-    var threshold = navbar_top.getBoundingClientRect().height / 2;
-
-    // retrieve scrolled NavBar
-    var navbar_scrolled = document.getElementById("NavBarScrolled");
-    var page_links = document.getElementById("NavBarPageLinks")
-
     // retrieve scroll position
     var scroll_pos = window.scrollY;
 
@@ -39,9 +42,11 @@ function navbar_scroll()
         page_links.classList.remove("display-contents");
         page_links.classList.add("display-none");
     }
-    else if ( scroll_pos < scroll_top)
+    else if ( scroll_pos < scroll_top && scroll_pos + window.innerHeight < postbar_y )
     {
         // change NavBar styling if scrolling up
+        console.log(window.innerHeight);
+        console.log(scroll_pos, postbar_y);
 
         // make links visible
         page_links.classList.remove("display-none");
