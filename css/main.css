@@ -170,7 +170,7 @@ ul {
     left: -100%;
     background: black;
     z-index: 4;
-    transition: 0.25s ease-out;
+    transition: left 0.25s ease-out;
 }
 
 .PageTransition.is-active {
