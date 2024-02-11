@@ -13,6 +13,8 @@
     --margin-large: 50px;
 
     --navbar-index: 3;
+
+    --anim-len: 0.25s;
 }
 
 /********** BODY **********/ 
@@ -261,7 +263,7 @@ p.hobby-description {
 }
 
 .Content.comeIn {
-    animation: 1s comeIn forwards;
+    animation: var(--anim-len) comeIn forwards;
 }
 
 .AboutMe {
@@ -429,8 +431,8 @@ p.tech-description {
 }
 
 .interest-container.comeIn {
-    animation: 1s comeIn forwards;
-    animation-delay: 0.75s;
+    animation: var(--anim-len) comeIn forwards;
+    animation-delay: 0.5s;
 }
 
 .interest-container.left {
@@ -523,7 +525,7 @@ img.project {
 }
 
 .hobby-container.comeIn {
-    animation: 1s comeIn forwards;
+    animation: var(--anim-len) comeIn forwards;
 }
 
 @keyframes comeIn {
