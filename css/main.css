@@ -14,7 +14,7 @@
 
     --navbar-index: 3;
 
-    --anim-len: 0.25s;
+    --anim-len: 0.5s;
 }
 
 /********** BODY **********/ 
@@ -245,8 +245,13 @@ p.experience {
 }
 
 p.hobby-description {
+    position: absolute;
     color: black;
     font-family: monaco, Consolas, Lucida Console;
+    font-size: 48pt;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s;
 }
 
 .important-text {
@@ -322,19 +327,43 @@ p.hobby-description {
 }
 
 .Carousel-container {
-    position: relative;
-    margin: auto;
-    width: 500px;
-    height: auto;
     display: flex;
+    height: auto;
+    width: 1000px;
+    margin: auto;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 .Carousel-container::-webkit-scrollbar {
     display: none;
+}
+
+.Carousel-item {
+    position: relative;
+    flex: none;
+    height: 400px;
+    width: 400px;
+    margin: var(--margin-small);
+    scroll-snap-align: center;
+    box-shadow: 0px 5px 10px 5px black;
+}
+
+.hobby-img {
+    position: absolute;
+    top: 0;
+    transition: top 0.25s;
+}
+
+.hobby-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .Container {
@@ -499,33 +528,6 @@ img.project {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 100px;
-}
-
-.hobby-container {
-    flex: none;
-    height: 300px;
-    width: 300px;
-    opacity: 0;
-    top: 100%;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    box-shadow: 0px 3px 20px 5px black;
-}
-
-.hobby-container:hover {
-    scale: 120%;
-    animation: 0.5s popOut ease-in-out;
-}
-
-@keyframes popOut {
-    0% { scale: 100%; }
-    50% { scale: 130%; }
-    100% { scale: 120%; }
-}
-
-.hobby-container.comeIn {
-    animation: var(--anim-len) comeIn forwards;
 }
 
 @keyframes comeIn {
