@@ -7,10 +7,13 @@
     </head>
     <body>
         <div id="PageName">Interests</div>
-        <div id="PageTransitionDiv"></div>
-        <script type="text/javascript">
-            $('#PageTransitionDiv').load('page_transition.html');
-        </script>
+        <div class="PageTransition is-active" id="PageTransition">
+            <div class="LoadingDots" id="LoadingDots">
+                <h1 class="Dot one">.</h1>
+                <h1 class="Dot two">.</h1>
+                <h1 class="Dot three">.</h1>
+            </div>
+        </div>
         <div id="NavBarDiv"></div>
         <script type="text/javascript">
             $('#NavBarDiv').load('navbar.html');
@@ -32,26 +35,39 @@
                             Later on in my college career, I joined the Human-Computer Interaction (HCI) Lab. There, 
                             I worked with the Microsoft Hololens to create an AR workspace for a Panda robotic arm. Check out my projects page for more 
                             on this. Another project at the HCI involved researching optimal positioning for 
-                            a camera drone providing a viewpoint for a remote robot operator. In the future, I hope to delve into medical robotics 
-                            and see what contributions I can make there.
+                            a camera drone providing a viewpoint for a remote robot operator. 
+                            <br/><br/>
+                            Today, I am part of the Biorobotics Team at Carnegie Mellon University (CMU). Here, I am helping the Medsnake team build out a 
+                            visualization tool suite. Helping to make a physician's job easier and more effective is something that I feel highly rewarded by, 
+                            and I hope to be able to build a career around this in the future.
                         </p>
                     </div>
                     <div class="flex center-vertical right-horizontal">
+                        <p class="line-spacing-medium text-justify">
+                            Spurred by my interest in Biorobotics, I have recently realized my passion for medicine. I often find myself cogitating a career 
+                            where I can combine my love of robotics with medicine. To me, writing software that enables me to improve a patient's experience  
+                            during treatment is beyond rewarding. This is what drives me to pursue medical school today.
+
+                            I have found such joy in my interactions with patients while volunteering and know that I would be most fulfilled with a career 
+                            dedicated to enhancing the patient experience.
+                        </p>
+                        <div class="interest-container right">
+                            <div class="interest-background" style="background-image: url('img/medicine_pic.jpeg');"></div>
+                            <h2 class="text-center padding-medium">Medicine</h2>
+                        </div>
+                    </div>
+                    <div class="flex center-vertical left-horizontal">
+                        <div class="interest-container left">
+                            <div class="interest-background" style="background-image: url('img/computer_vision.png');"></div>
+                            <h2 class="text-center padding-medium">Computer Vision</h2>
+                        </div>
                         <p class="line-spacing-medium text-justify">
                             I have recently started to experiment more with Computer Vision (CV), and in doing so, I have realized it is something that piques 
                             my interest. It relies heavily on n-dimensional math, which is something that challenges me. While I currently only 
                             play around with OpenCV on my RaspberryPi, I am hoping to do some research with it in the near future.
                         </p>
-                        <div class="interest-container right">
-                            <div class="interest-background" style="background-image: url('img/computer_vision.png');"></div>
-                            <h2 class="text-center padding-medium">Computer Vision</h2>
-                        </div>
                     </div>
-                    <div class="flex center-vertical left-horizontal">
-                        <div class="interest-container left">
-                            <div class="interest-background" style="background-image: url('img/neural_network.png')"></div>
-                            <h2 class="text-center padding-medium">AI</h2>
-                        </div>
+                    <div class="flex center-vertical right-horizontal">
                         <p class="line-spacing-medium text-justify">
                             From assignments in class to personal projects to professional development, I have a strong interest in AI. I enjoy 
                             learning about how math can be applied to a problem to create a model that allows the computer to "think" on its own. 
@@ -59,6 +75,10 @@
                             I have done AI projects through coursework and on my own, I am looking to get my foot inside the "AI-door" in the workplace to learn 
                             the different ways companies are reaping AI's benefits.
                         </p>
+                        <div class="interest-container right">
+                            <div class="interest-background" style="background-image: url('img/neural_network.png')"></div>
+                            <h2 class="text-center padding-medium">AI</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,6 +87,20 @@
                     Not-So-Professional Interests 
                 </h1>
                 <div class="Carousel-container">
+                    <div class="Carousel-item">
+                        <div class="hobby-container">
+                            <img class="hobby-img img margin-zero straight-border" src="img/piano.jpg">
+                            <p class="p hobby-description margin-medium">
+                                Music
+                                <br/>
+                                <span style="font-size: 16pt;">
+                                    <a href="https://www.youtube.com/embed/A1PCVl4IceI?start=1311" target="_blank">
+                                        Check out one of my performances!
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
                     <div class="Carousel-item">
                         <div class="hobby-container">
                             <img class="hobby-img img margin-zero straight-border" src="img/cooking.jpg">
@@ -80,20 +114,6 @@
                             <img class="hobby-img img margin-zero straight-border" src="img/lifting.jpg">
                             <p class="p hobby-description margin-medium">
                                 Exercising 💪
-                            </p>
-                        </div>
-                    </div>
-                    <div class="Carousel-item">
-                        <div class="hobby-container">
-                            <img class="hobby-img img margin-zero straight-border" src="img/piano.jpg">
-                            <p class="p hobby-description margin-medium">
-                                Music
-                                <br/>
-                                <span style="font-size: 16pt;">
-                                    <a href="https://www.youtube.com/embed/A1PCVl4IceI?start=1311" target="_blank">
-                                        Check out one of my performances!
-                                    </a>
-                                </span>
                             </p>
                         </div>
                     </div>
