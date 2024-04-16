@@ -488,6 +488,7 @@ p.tech-description {
 }
 
 .project-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     border: 2px solid white;
@@ -495,6 +496,16 @@ p.tech-description {
     height: 500;
     width: 350;
     margin: var(--margin-large);
+    overflow: hidden;
+}
+
+.project-links {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--theme-color);
+    left: 100%;
+    transition: left 0.25s ease;
 }
 
 /********** PICTURES **********/
