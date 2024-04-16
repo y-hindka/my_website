@@ -7,20 +7,18 @@
     </head>
     <body style="background-image: url('img/background4.jpg');">
         <div id="PageName">Resume</div>
-        <div id="PageTransitionDiv"></div>
-        <script type="text/javascript">
-            $('#PageTransitionDiv').load('page_transition.html');
-        </script>
+        <div class="PageTransition is-active" id="PageTransition">
+            <div class="LoadingDots" id="LoadingDots">
+                <h1 class="Dot one">.</h1>
+                <h1 class="Dot two">.</h1>
+                <h1 class="Dot three">.</h1>
+            </div>
+        </div>
         <div id="NavBarDiv"></div>
         <script type="text/javascript">
             $('#NavBarDiv').load('navbar.html');
         </script>
         <div class="resume-container">
-            <div class="resume-container">
-                <a class="a Download-button" href="https://docs.google.com/document/d/14plEVLzwJLV6qmJsU5ox26bfhOyOUTn3HyGvOpITcUU/export?format=pdf" target="_blank">
-                        Download PDF
-                </a>
-            </div>
             <div class="resume-container">
                 <embed height="100%" width="75%" src="docs/Yash_Hindka_Resume.pdf"/>
             </div>

@@ -171,7 +171,7 @@ ul {
     width: 100%;
     left: -100%;
     background: black;
-    z-index: 4;
+    z-index: 99;
     transition: left 0.25s ease-out;
 }
 

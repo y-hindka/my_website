@@ -7,10 +7,13 @@
     </head>
     <body style="background-color: rgba(0,0,0,0.95);">
         <div id="PageName">Projects</div>
-        <div id="PageTransitionDiv"></div>
-        <script type="text/javascript">
-            $('#PageTransitionDiv').load('page_transition.html');
-        </script>
+        <div class="PageTransition is-active" id="PageTransition">
+            <div class="LoadingDots" id="LoadingDots">
+                <h1 class="Dot one">.</h1>
+                <h1 class="Dot two">.</h1>
+                <h1 class="Dot three">.</h1>
+            </div>
+        </div>
         <div id="NavBarDiv"></div>
         <script type="text/javascript">
             $('#NavBarDiv').load('navbar.html');
